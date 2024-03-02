@@ -1,0 +1,25 @@
+<div class="h-screen sticky top-0 left-0 lg:w-[250px] w-[200px] bg-gray-50 shadow-md flex flex-col" >
+    <div class="space-x-3 flex items-center py-4 px-9" >
+        <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/c/ca/Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg/242px-Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Khoa_h%E1%BB%8Dc_T%E1%BB%B1_nhi%C3%AAn%2C_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_Qu%E1%BB%91c_gia_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg.png" alt="hcmus logo" class="h-full w-full" >
+    </div>
+
+    <div class="p-4" >
+        <div class="mt-5" > <span class="ml-2 text-gray-500 text-sm" >MENU</span> </div>
+        <a 
+            *ngFor="let item of linkItems"
+            routerLink={{item.link}}
+            class="space-x-3 flex items-center py-4 px-5 duration-100 rounded-lg cursor-pointer w-full 
+            hover:bg-gray-100 hover:text-[#5A67BA] text-gray-500" 
+        >
+            <i class={{item.icon}}></i>
+            <span>{{item.title}}</span>
+        </a>
+    </div>
+
+    <button 
+        class="mt-auto mb-3 mx-auto w-2/3 px-5 py-3 bg-white text-[#5A67BA] border-[#5A67BA] border shadow-md rounded-lg
+        hover:bg-[]"
+    >
+        <i class="fa fa-sign-out-alt"></i> logout
+    </button>
+</div>
