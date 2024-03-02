@@ -1,4 +1,4 @@
-Đề Tài: sắp xếp thời khóa biểu tự động ( hệ đại học )
+Đề Tài: sắp xếp thời khóa biểu tự động
 
 Giới Thiệu
 Xếp thời khóa biểu trường học là công việc mất nhiều thời gian, thời khóa biểu phải khoa học thuận tiện cho cả giảng viên và sinh viên. Đây là việc lên kế hoạch và phân bổ các việc từ quan trọng đến ít quan trọng trong những khoảng thời gian nhất định. 
