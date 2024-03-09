@@ -38,10 +38,14 @@ export class SidebarComponent {
       icon : 'fa fa-book'
     },
     {
+      title : 'request',
+      link : '/request',
+      icon : 'fa fa-check-square'
+    },
+    {
       title : 'Room',
       link : '/room',
       icon : 'fa fa-store-alt'
     }
-
   ]
 }

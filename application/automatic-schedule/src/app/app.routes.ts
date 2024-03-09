@@ -8,6 +8,9 @@ import { TeacherComponent } from './pages/teacher/teacher.component';
 import { RoomComponent } from './pages/room/room.component';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { DashboardTemplateComponent } from './component/dashboard-template/dashboard-template.component';
+import { RequestComponent } from './pages/request/request.component';
+import { ScheduleViewComponent } from './pages/schedule-view/schedule-view.component';
+import { ScheduleAdminComponent } from './pages/schedule-admin/schedule-admin.component';
 
 export const routes: Routes = [
     {
@@ -25,7 +28,10 @@ export const routes: Routes = [
           { path:'lesson',component:LessonComponent},
           { path:'teacher', component: TeacherComponent},
           { path:'room', component: RoomComponent},
-          { path:'schedule', component: ScheduleComponent}
+          { path:'request', component: RequestComponent},
+          { path:'schedule', component: ScheduleComponent},
+          { path:'schedule-view', component: ScheduleViewComponent},
+          { path:'schedule-admin', component: ScheduleAdminComponent}
         ],
         component:DashboardTemplateComponent,
       },
