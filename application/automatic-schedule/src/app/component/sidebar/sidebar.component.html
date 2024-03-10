@@ -8,7 +8,7 @@
         <a 
             *ngFor="let item of linkItems"
             routerLink={{item.link}}
-            class="space-x-3 flex items-center py-4 px-5 duration-100 rounded-lg cursor-pointer w-full 
+            class="space-x-3 flex items-center py-3 px-5 duration-100 rounded-lg cursor-pointer w-full 
             hover:bg-gray-100 hover:text-[#5A67BA] text-gray-500" 
         >
             <i class={{item.icon}}></i>
@@ -19,6 +19,7 @@
     <button 
         class="mt-auto mb-3 mx-auto w-2/3 px-5 py-3 bg-white text-[#5A67BA] border-[#5A67BA] border shadow-md rounded-lg
         hover:bg-[]"
+        routerLink="/login"
     >
         <i class="fa fa-sign-out-alt"></i> logout
     </button>
