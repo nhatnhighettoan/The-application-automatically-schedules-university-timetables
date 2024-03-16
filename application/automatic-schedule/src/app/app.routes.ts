@@ -30,8 +30,8 @@ export const routes: Routes = [
           { path:'room', component: RoomComponent},
           { path:'request', component: RequestComponent},
           { path:'schedule', component: ScheduleComponent},
-          { path:'schedule-view', component: ScheduleViewComponent},
-          { path:'schedule-admin', component: ScheduleAdminComponent}
+          { path:'schedule-view/:id', component: ScheduleViewComponent},
+          { path:'schedule-admin/:id', component: ScheduleAdminComponent}
         ],
         component:DashboardTemplateComponent,
       },

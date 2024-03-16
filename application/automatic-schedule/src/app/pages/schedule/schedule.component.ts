@@ -1,38 +1,51 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
-  imports: [NgIf,NgFor],
+  imports: [NgIf,NgFor,RouterLink],
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css'
 })
 export class ScheduleComponent {
   data : any[] = [
     {
-      title : 'Mathematic And Computer Science',
-      scheduleNumber : 10, 
+      title : 'Lop Dai tra - Dai Cuong',
+      semester : 1,
+      semesterYearStart: 2020,
+      semesterYearEnd: 2024 
     },
     {
-      title : 'Biology',
-      scheduleNumber : 10, 
+      title : 'Lop Chat Luong Cao',
+      semester : 1,
+      semesterYearStart: 2020,
+      semesterYearEnd: 2024 
     },
     {
-      title : 'Computer Science',
-      scheduleNumber : 10, 
+      title : 'Lop Cu Nhan',
+      semester : 1,
+      semesterYearStart: 2020,
+      semesterYearEnd: 2024 
     },
     {
-      title : 'Mathematic',
-      scheduleNumber : 10, 
+      title : 'Lop Tien Tien',
+      semester : 1,
+      semesterYearStart: 2020,
+      semesterYearEnd: 2024 
     },
     {
-      title : 'Physic And Computer Science',
-      scheduleNumber : 10, 
+      title : 'Lop Dai Tra - Chuyen Nganh',
+      semester : 1,
+      semesterYearStart: 2020,
+      semesterYearEnd: 2024 
     },
     {
       title : 'Data Science',
-      scheduleNumber : 10, 
+      semester : 1,
+      semesterYearStart: 2020,
+      semesterYearEnd: 2024 
     },
   ]
 }
