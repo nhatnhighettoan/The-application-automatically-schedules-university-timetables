@@ -9,7 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './schedule-view.component.css'
 })
 export class ScheduleViewComponent {
+  title = 'Thoi Khoa Bieu Lop Dai Tra'
   columnsKey : any[] = [
+    'STT',
+    'Id',
     'Lesson',
     'Class',
     'Time',
@@ -22,6 +25,7 @@ export class ScheduleViewComponent {
 
   data : any[] = [
     {
+      id:'mth201102',
       lesson:'Math',
       class: '20TTH',
       timeStart: '7h30',
@@ -32,6 +36,7 @@ export class ScheduleViewComponent {
       type: 'Ly Thuyet'
     },
     {
+      id:'mth201112',
       lesson:'Math 2',
       class: '20TTH',
       timeStart: '7h30',

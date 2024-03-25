@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './schedule.component.css'
 })
 export class ScheduleComponent {
+  title = "Schedule"
   data : any[] = [
     {
       title : 'Lop Dai tra - Dai Cuong',
