@@ -13,36 +13,30 @@ export class RoomComponent {
   columnsKey : any[] = [
     'STT',
     'Id',
-    'Teacher',
-    'Gender',
-    'Falculty',
-    'Birthday',
-    'Address',
-    'Email',
-    'Phone',
+    'Room',
+    'Room Description',
+    'Location',
+    'Capacity',
+    'Type',
     'Action'
   ]
 
   data : any[] = [
     {
-      Id:'teacher001',
-      Teacher:'nguyen van a',
-      Gender: 'male',
-      Falculty: 'Math',
-      Birthday: '20/01/2002', 
-      Address: 'lorem street',
-      Email: 'lorem@gmail.com',
-      Phone: '091234567',
+      Id:'room001',
+      room:'F023',
+      roomDescription: 'Phong hoi truong',
+      location: 'NVC',
+      capacity: '150', 
+      type: 'ly thuyet',
     },
     {
-      Id:'teacher002',
-      Teacher:'nguyen van b',
-      Gender: 'female',
-      Falculty: 'Alogorythm',
-      Birthday: '20/01/2001', 
-      Address: 'lorem street',
-      Email: 'lorem2@gmail.com',
-      Phone: '091230567',
+      Id:'room002',
+      room:'F033',
+      roomDescription: 'Phong may tinh',
+      location: 'Linh Trung',
+      capacity: '100', 
+      type: 'thuc hanh',
     },
   ]
 }

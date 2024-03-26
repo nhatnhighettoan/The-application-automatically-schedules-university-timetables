@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './request.component.css'
 })
 export class RequestComponent {
-
+  title = "Request"
 }
