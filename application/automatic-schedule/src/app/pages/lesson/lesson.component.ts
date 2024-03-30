@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [NgFor],
   templateUrl: './lesson.component.html',
-  styleUrl: './lesson.component.css'
+  styleUrl: './lesson.component.css',
+  host: {ngSkipHydration: 'true'},
 })
 export class LessonComponent {
   title = 'Lesson Resource'

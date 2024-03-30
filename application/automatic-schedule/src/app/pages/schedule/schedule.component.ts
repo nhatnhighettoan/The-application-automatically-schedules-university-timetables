@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [NgIf,NgFor,RouterLink],
   templateUrl: './schedule.component.html',
-  styleUrl: './schedule.component.css'
+  styleUrl: './schedule.component.css',
 })
 export class ScheduleComponent {
   title = "Schedule"

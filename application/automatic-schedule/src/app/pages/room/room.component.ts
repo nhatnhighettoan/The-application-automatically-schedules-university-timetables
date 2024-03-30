@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [NgFor],
   templateUrl: './room.component.html',
-  styleUrl: './room.component.css'
+  styleUrl: './room.component.css',
 })
 export class RoomComponent {
   title = 'Room Resource'
