@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [NgFor],
   templateUrl: './teacher.component.html',
-  styleUrl: './teacher.component.css'
+  styleUrl: './teacher.component.css',
 })
 export class TeacherComponent {
   title = 'Teacher Resource'

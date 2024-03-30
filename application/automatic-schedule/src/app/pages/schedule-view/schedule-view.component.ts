@@ -1,12 +1,13 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { ViewtableComponent } from '../../component/viewtable/viewtable.component';
 
 @Component({
   selector: 'app-schedule-view',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,ViewtableComponent],
   templateUrl: './schedule-view.component.html',
-  styleUrl: './schedule-view.component.css'
+  styleUrl: './schedule-view.component.css',
 })
 export class ScheduleViewComponent {
   title = 'Thoi Khoa Bieu Lop Dai Tra'

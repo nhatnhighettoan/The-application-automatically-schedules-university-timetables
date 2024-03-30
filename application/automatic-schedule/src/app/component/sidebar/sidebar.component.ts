@@ -13,7 +13,8 @@ interface LinkItem{
   standalone: true,
   imports: [RouterLink,RouterLinkActive,NgFor],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  styleUrl: './sidebar.component.css',
+  host: {ngSkipHydration: 'true'},
 })
 export class SidebarComponent {
   linkItems : LinkItem[] = [

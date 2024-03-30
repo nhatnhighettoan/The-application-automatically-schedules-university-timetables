@@ -8,7 +8,8 @@ import { HeaderComponent } from '../header/header.component';
   standalone: true,
   imports: [RouterOutlet,SidebarComponent,HeaderComponent],
   templateUrl: './dashboard-template.component.html',
-  styleUrl: './dashboard-template.component.css'
+  styleUrl: './dashboard-template.component.css',
+  host: {ngSkipHydration: 'true'},
 })
 export class DashboardTemplateComponent {
 

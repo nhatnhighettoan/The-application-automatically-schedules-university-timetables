@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [NgIf],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  host: {ngSkipHydration: 'true'},
 })
 export class HeaderComponent {
   showSubmenu = false

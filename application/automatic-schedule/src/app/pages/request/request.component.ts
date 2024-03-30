@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './request.component.html',
-  styleUrl: './request.component.css'
+  styleUrl: './request.component.css',
 })
 export class RequestComponent {
   title = "Request"
