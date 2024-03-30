@@ -14,28 +14,35 @@ export class ViewtableComponent {
   openViewtable = false
   weekDay = [
     'monday',
+    'monday 2',
     'tuesday',
+    'tuesday 2',
     'wednesday',
+    'wednesday 2',
     'thursday',
+    'thursday 2',
     'friday',
+    'friday 2',
     'saturday',
-    'sunday'
+    'saturday 2',
+    'sunday',
+    'sunday 2',
   ]
 
   courses = [
     {
       ID: 1,
-      name: 'c program 2',
+      name: 'xu ly bien hinh va xu ly anh',
       day: 'monday',
       timeStart: '9h',
       timeEnd: '10h',
       address: 'Linh Trung',
       room: 'E304',
-      teacher:'lorem teacher'
+      teacher:'vo tran gia haoooo'
     },
     {
       ID: 2,
-      name: 'c program 3',
+      name: 'hoa dai cuong 2',
       day: 'monday',
       timeStart: '9h',
       timeEnd: '10h',
