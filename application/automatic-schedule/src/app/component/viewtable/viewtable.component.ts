@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 })
 export class ViewtableComponent {
   // PROPERTY
-  closeViewtable = false
+  openViewtable = false
   weekDay = [
     'monday',
     'tuesday',
@@ -260,10 +260,10 @@ export class ViewtableComponent {
 
   // METHOD
   onCloseViewtable(){
-    this.closeViewtable = true
+    this.openViewtable = false
   }
 
   onOpenViewtable(){
-    this.closeViewtable = false    
+    this.openViewtable = true    
   }
 }
