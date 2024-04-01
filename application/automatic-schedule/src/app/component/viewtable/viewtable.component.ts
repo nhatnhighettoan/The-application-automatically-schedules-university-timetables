@@ -11,22 +11,22 @@ import { Component } from '@angular/core';
 })
 export class ViewtableComponent {
   // PROPERTY
-  openViewtable = false
+  openViewtable = true
   weekDay = [
-    'monday',
-    'monday 2',
-    'tuesday',
-    'tuesday 2',
-    'wednesday',
-    'wednesday 2',
-    'thursday',
-    'thursday 2',
-    'friday',
-    'friday 2',
-    'saturday',
-    'saturday 2',
-    'sunday',
-    'sunday 2',
+    'monday_day',
+    'monday_night',
+    'tuesday_day',
+    'tuesday_night',
+    'wednesday_day',
+    'wednesday_night',
+    'thursday_day',
+    'thursday_night',
+    'friday_day',
+    'friday_night',
+    'saturday_day',
+    'saturday_night',
+    'sunday_day',
+    'sunday_night',
   ]
 
   courses = [
@@ -272,5 +272,10 @@ export class ViewtableComponent {
 
   onOpenViewtable(){
     this.openViewtable = true    
+  }
+
+  slicePatternWithComma(text : string, comma:string){
+    const words = text.split(comma)
+    return words
   }
 }

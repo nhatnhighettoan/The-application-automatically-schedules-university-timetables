@@ -10,6 +10,7 @@ import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { DashboardTemplateComponent } from './component/dashboard-template/dashboard-template.component';
 import { RequestComponent } from './pages/request/request.component';
 import { ScheduleViewComponent } from './pages/schedule-view/schedule-view.component';
+import { ApprovalComponent } from './pages/approval/approval.component';
 
 export const routes: Routes = [
     {
@@ -28,6 +29,7 @@ export const routes: Routes = [
           { path:'teacher', component: TeacherComponent},
           { path:'room', component: RoomComponent},
           { path:'request', component: RequestComponent},
+          { path:'approval', component: ApprovalComponent},
           { path:'schedule', component: ScheduleComponent},
           { path:'schedule-view/:id', component: ScheduleViewComponent},
         ],
