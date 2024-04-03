@@ -1,7 +1,8 @@
 <div class="overlap" *ngIf="openViewtable">
-    <div class="fixed top-0 bottom-0 left-0 right-0 bg-black/80 flex flex-col">
+    <div class="fixed top-0 bottom-0 left-0 right-0 bg-black/80 flex flex-col z-[999]">
         <!-- view table header-->
         <div class="w-full text-gray-400 text-lg px-4 py-4 flex items-center justify-between">
+            <!-- go back -->
             <div class="space-x-2" >
                 <button class=" rounded-full px-2 hover:bg-white/10" (click)="onCloseViewtable()">
                     <i class="fa fa-arrow-left"></i>
@@ -9,15 +10,23 @@
                 <span>Thoi Khoa Bieu Hoc Ky Hai</span>
             </div>
 
-
+            <!-- search -->
             <div class="flex items-center justify-center text-base flex-1 relative">
-                <button class="rounded-full px-2 ml-5 hover:bg-white/10" (click)="onCloseViewtable()">
+                <!-- search advantage -->
+                <button 
+                    (click)="onToggleAdvantageSearchTable()"
+                    class="rounded-full px-2 ml-5 hover:bg-white/10"
+                >
                     <i class="fa fa-filter"></i>
                 </button>
+                <!-- search input -->
                 <div class="px-3 py-1 rounded-full border bg-black border-gray-400 w-1/2" >
                     <input type="text" class="outline-none bg-transparent placeholder:text-center w-full" placeholder="Search Course">
                 </div>
+
+                <!-- advantage search table -->
                 <div 
+                    *ngIf="openAdvantageSearchTable"
                     class="w-[70%] h-fit p-5 bg-white absolute top-full left-1/2 translate-y-1 -translate-x-1/2 z-20 
                     border rounded-lg text-black space-y-4"
                 >
@@ -75,6 +84,7 @@
                 </div>
             </div>
 
+            <!-- export -->
             <div class="space-x-3 flex items-center">
                 <button class="rounded-full px-2 hover:bg-white/10">
                     <i class="fa fa-pen"></i>

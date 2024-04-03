@@ -11,7 +11,8 @@ import { Component } from '@angular/core';
 })
 export class ViewtableComponent {
   // PROPERTY
-  openViewtable = true
+  openViewtable = false
+  openAdvantageSearchTable = false
   weekDay = [
     'monday_day',
     'monday_night',
@@ -272,6 +273,10 @@ export class ViewtableComponent {
 
   onOpenViewtable(){
     this.openViewtable = true    
+  }
+
+  onToggleAdvantageSearchTable(){
+    this.openAdvantageSearchTable = !this.openAdvantageSearchTable
   }
 
   slicePatternWithComma(text : string, comma:string){

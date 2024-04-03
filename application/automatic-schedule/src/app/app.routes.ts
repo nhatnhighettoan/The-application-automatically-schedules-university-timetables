@@ -11,6 +11,7 @@ import { DashboardTemplateComponent } from './component/dashboard-template/dashb
 import { RequestComponent } from './pages/request/request.component';
 import { ScheduleViewComponent } from './pages/schedule-view/schedule-view.component';
 import { ApprovalComponent } from './pages/approval/approval.component';
+import { CourseViewComponent } from './pages/course-view/course-view.component';
 
 export const routes: Routes = [
     {
@@ -32,6 +33,7 @@ export const routes: Routes = [
           { path:'approval', component: ApprovalComponent},
           { path:'schedule', component: ScheduleComponent},
           { path:'schedule-view/:id', component: ScheduleViewComponent},
+          { path:'course-view/:id', component: CourseViewComponent},
         ],
         component:DashboardTemplateComponent,
       },
