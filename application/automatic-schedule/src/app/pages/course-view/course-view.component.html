@@ -1,55 +1,121 @@
 <div class="p-3">
-    <div class="px-2 mt-2 flex items-center justify-between" >
-        <button class="shadow-md rounded-md px-3 border border-gray-500 bg-gray-500 text-white hover:bg-white hover:text-gray-500">
+    <!-- toolbar -->
+    <div class="px-2 mt-2 flex items-center justify-between">
+        <button
+            class="shadow-md rounded-md px-3 border border-gray-500 bg-gray-500 text-white hover:bg-white hover:text-gray-500">
             <i class="fa fa-arrow-left"></i>
         </button>
 
-        <div class="flex items-center space-x-2" >
-            <button class="bg-sky-500 shadow-md rounded-full px-2 py-1 border text-white hover:bg-white hover:text-sky-500">
+        <div class="flex items-center space-x-2">
+            <button
+                class="bg-sky-500 shadow-md rounded-full px-2 py-1 border text-white hover:bg-white hover:text-sky-500">
                 <i class="fa fa-pen"></i>
-            </button>        
-            <button class="bg-green-500 shadow-md rounded-full px-[9px] py-1 border text-white hover:bg-white hover:text-green-500">
+            </button>
+            <button
+                class="bg-green-500 shadow-md rounded-full px-[9px] py-1 border text-white hover:bg-white hover:text-green-500">
                 <i class="fa fa-save"></i>
             </button>
         </div>
     </div>
 
-    <div class="m-3 space-y-3" >
-        <div class="h-[100px] w-[100px] rounded-full bg-gradient-to-b from-blue-400 to-sky-400 mx-auto flex justify-center" > 
+    <!-- img - course name -->
+    <div class="m-3 space-y-3">
+        <div
+            class="h-[100px] w-[100px] rounded-full bg-gradient-to-b from-blue-400 to-sky-400 mx-auto flex justify-center">
             <i class="fa fa-calendar-week text-[50px] mt-6"></i>
         </div>
-        <h1 class="text-2xl font-semibold text-center" >Toan Roi Rac</h1>
+        <h1 class="text-2xl font-semibold text-center">Toan Roi Rac</h1>
     </div>
 
-    <hr class="my-4" >
-    <div class="space-y-2 px-4 grid grid-rows-2 grid-flow-col" >
+    <!-- course information -->
+    <hr class="my-4">
+    <div class="space-y-2 px-4 grid grid-rows-2 grid-flow-col">
         <div class="items-center flex space-x-2">
-            <span class="rounded-xl px-2 bg-sky-300 font-semibold" >Class Name:</span>
+            <span class="rounded-xl px-2 bg-gradient-to-b from-blue-300 to-sky-300 font-semibold">Class Name:</span>
             <span>20TTH - Toan Roi Rac</span>
         </div>
-        <div class="items-center flex space-x-2" >
-            <span class="rounded-xl px-2 bg-sky-300 font-semibold" > Periods:</span>
+        <div class="items-center flex space-x-2">
+            <span class="rounded-xl px-2 bg-gradient-to-b from-blue-300 to-sky-300 font-semibold"> Periods:</span>
             <span>12</span>
         </div>
         <div class="items-center flex space-x-2">
-            <span class="rounded-xl px-2 bg-sky-300 font-semibold" >Co-Hort:</span>
+            <span class="rounded-xl px-2 bg-gradient-to-b from-blue-300 to-sky-300 font-semibold">Co-Hort:</span>
             <span>150 person</span>
         </div>
         <div class="items-center flex space-x-2">
-            <span class="rounded-xl px-2 bg-sky-300 font-semibold" >Class Size:</span>
+            <span class="rounded-xl px-2 bg-gradient-to-b from-blue-300 to-sky-300 font-semibold">Class Size:</span>
             <span>120 person</span>
         </div>
-        <div class="items-center flex space-x-2"> 
-            <span class="rounded-xl px-2 bg-sky-300 font-semibold" >Time:</span>
+        <div class="items-center flex space-x-2">
+            <span class="rounded-xl px-2 bg-gradient-to-b from-blue-300 to-sky-300 font-semibold">Time:</span>
             <span>1h30p - 5h</span>
         </div>
     </div>
 
-    <hr class="my-4" >
-    <div>
-        room
-        teacher
-        lesson
-        schedule
+    <!-- room - teacher - lesson - schedule information -->
+    <hr class="my-4">
+    <div class="grid grid-cols-4 grid-flow-row gap-4">
+        <!-- room -->
+        <div class="flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md">
+            <div class="w-full flex items-center mb-2">
+                <span class="font-semibold">ROOM</span>
+                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                    <i class="fa fa-store-alt text-lg"></i>
+                </div>
+            </div>
+            <p>ID: <span class="text-gray-600 ml-2">ROOM001</span></p>
+            <p>Room: <span class="text-gray-600 ml-2">F302</span></p>
+            <p>Description: <span class="text-gray-600 ml-2">Room for student and teacher math</span></p>
+            <p>Location: <span class="text-gray-600 ml-2">Linh Trung</span></p>
+            <p>Capacity: <span class="text-gray-600 ml-2">200 person</span></p>
+            <p>Type: <span class="text-gray-600 ml-2">Ly Thuyet</span></p>
+        </div>
+
+        <!-- teacher -->
+        <div class="flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md">
+            <div class="w-full flex items-center mb-2">
+                <span class="font-semibold">TEACHER</span>
+                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                    <i class="fa fa-chalkboard-teacher text-lg"></i>
+                </div>
+            </div>
+            <p>ID: <span class="text-gray-600 ml-2">TEACHER001</span></p>
+            <p>Teacher: <span class="text-gray-600 ml-2">LOREM nguyen</span></p>
+            <p>Gender: <span class="text-gray-600 ml-2">Male</span></p>
+            <p>Falculty: <span class="text-gray-600 ml-2">Mathematic</span></p>
+            <p>Birthday: <span class="text-gray-600 ml-2">20/01/1999</span></p>
+            <p>Address: <span class="text-gray-600 ml-2">Lorem street, KP lorem</span></p>
+            <p>Email: <span class="text-gray-600 ml-2">Lorem&#64;gmail.com</span></p>
+            <p>Phone: <span class="text-gray-600 ml-2">0899807322</span></p>
+        </div>
+
+        <!-- lesson -->
+        <div class="flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md">
+            <div class="w-full flex items-center mb-2">
+                <span class="font-semibold">LESSON</span>
+                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                    <i class="fa fa-book text-lg"></i>
+                </div>
+            </div>
+            <p>ID: <span class="text-gray-600 ml-2">LESSON001</span></p>
+            <p>Lesson: <span class="text-gray-600 ml-2">Toan Roi Rac</span></p>
+            <p>Description: <span class="text-gray-600 ml-2">Math for student 1st year</span></p>
+            <p>Index: <span class="text-gray-600 ml-2">3</span></p>
+            <p>Type: <span class="text-gray-600 ml-2">Ly Thuyet</span></p>
+        </div>
+
+        <!-- schedule -->
+        <div class="flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md">
+            <div class="w-full flex items-center mb-2">
+                <span class="font-semibold">SCHEDULE</span>
+                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                    <i class="fa fa-calendar-alt text-lg"></i>
+                </div>
+            </div>
+            <p>ID: <span class="text-gray-600 ml-2">schedule001</span></p>
+            <p>Schedule: <span class="text-gray-600 ml-2">Lop dai tra</span></p>
+            <p>Year: <span class="text-gray-600 ml-2">2020-2021</span></p>
+            <p>Semester: <span class="text-gray-600 ml-2">HK 1</span></p>
+        </div>
     </div>
 </div>
