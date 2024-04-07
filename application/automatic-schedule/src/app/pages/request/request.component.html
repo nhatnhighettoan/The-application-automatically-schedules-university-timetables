@@ -24,21 +24,24 @@
     <!-- content -->
     <div class="p-4">
         <!-- bar table -->
-        <div class="border border-sky-400 p-4 rounded-lg bg-white shadow-md w-fit">
+        <div class="border-2 p-4 rounded-lg bg-white shadow-md w-fit" [ngClass]="[borderColor]">
             <div class="w-fit">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Select status
                 </label>
+                <!-- button filter status -->
                 <div class="flex items-center space-x-3">
-                    <button class="shadow-md px-4 py-1 border border-sky-300 bg-sky-300 rounded-md">All</button>
-                    <button class="shadow-md px-4 py-1 border border-gray-300 bg-gray-300 rounded-md">Wait</button>
-                    <button class="shadow-md px-4 py-1 border border-gray-300 bg-gray-300 rounded-md">Accept</button>
-                    <button class="shadow-md px-4 py-1 border border-gray-300 bg-gray-300 rounded-md">Cancel</button>
-                    <button class="shadow-md px-4 py-1 border border-gray-300 bg-gray-300 rounded-md">reject</button>
+                    <button 
+                        *ngFor="let status of statusList; index as index"
+                        (click)="onSelectStatus(index)"
+                        class="shadow-md border px-4 py-1 rounded-md"
+                        [ngClass]="statusSelect == index ? getStatusColor(status) : '' "
+                    >{{status}}</button>
                 </div>
             </div>
         </div>
 
+        <!-- table -->
         <div class="mt-4 rounded-lg overflow-hidden border border-slate-300">
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -71,10 +74,8 @@
                                 {{item.date}}
                             </td>
                             <td class="px-6 py-4">
-                                <div 
-                                    class="p-1 bg-yellow-400 w-[70px] text-center rounded-md text-white" 
-                                    
-                                >
+                                <div class="p-1 w-[70px] text-center rounded-md text-white"
+                                    [ngClass]="[getStatusColor(item.status)]">
                                     {{item.status}}
                                 </div>
                             </td>
