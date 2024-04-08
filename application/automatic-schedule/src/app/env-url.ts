@@ -1,12 +1,18 @@
 export enum EnvUrl {
+    // auth
     login = '/app/auth/login',
     register = '/app/auth/register',
-    lesson = '/app/admin/lesson',
-    teacher = '/app/admin/teacher',
-    room = '/app/admin/room',
-    schedule = '/app/admin/schedule',
-    scheduleView = '/app/admin/schedule-view/',
-    courseView = '/app/admin/course-view/',
-    approval = '/app/admin/approval',
-    request = '/app/admin/request',
+    // admin
+    lesson_admin = '/app/admin/lesson',
+    teacher_admin = '/app/admin/teacher',
+    room_admin = '/app/admin/room',
+    schedule_admin = '/app/admin/schedule',
+    scheduleView_admin = '/app/admin/schedule-view/',
+    courseView_admin = '/app/admin/course-view/',
+    approval_admin = '/app/admin/approval',
+    // user
+    request_user = '/app/user/request',
+    schedule_user = '/app/user/schedule',
+    scheduleView_user = '/app/user/schedule-view/',
+    courseView_user = '/app/user/course-view/',
 }

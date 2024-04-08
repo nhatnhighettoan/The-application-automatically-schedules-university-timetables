@@ -1,0 +1,28 @@
+<div class="h-screen sticky top-0 left-0 lg:w-[250px] w-[200px] bg-gray-50 border-r border-gray-200 flex flex-col overflow-auto" >
+    <div class="space-x-3 flex items-center py-4 px-9" >
+        <img src="../../../assets/img/hcmus-logo.png" alt="hcmus logo" class="h-full w-full" >
+    </div>
+
+    <div class="p-4 text-gray-500" >
+        <div class="mt-5" > <span class="ml-2 text-sm" >MENU</span> </div>
+        <a 
+            *ngFor="let item of linkItems"
+            routerLink={{item.link}}
+            [routerLinkActive]="['bg-gray-100', 'text-\[\#5A67BA\]']"
+            [routerLinkActiveOptions]="{exact:true}"
+            class="space-x-3 flex items-center py-3 px-5 duration-100 rounded-lg cursor-pointer w-full 
+            hover:bg-gray-100 hover:text-[#5A67BA]" 
+        >
+            <i class={{item.icon}}></i>
+            <span>{{item.title}}</span>
+        </a>
+    </div>
+
+    <button 
+        class="mt-auto mb-3 mx-auto w-2/3 px-5 py-3 bg-white text-[#5A67BA] border-[#5A67BA] border shadow-md rounded-lg
+        hover:bg-[]"
+        routerLink="/login"
+    >
+        <i class="fa fa-sign-out-alt"></i> logout
+    </button>
+</div>

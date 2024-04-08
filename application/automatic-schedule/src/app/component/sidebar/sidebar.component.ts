@@ -22,32 +22,37 @@ export class SidebarComponent {
   linkItems : LinkItem[] = [
     {
       title : 'Dashboard',
-      link : '/',
+      link : '/app/admin',
       icon : 'fa fa-desktop'
     },
     {
       title : 'Schedule',
-      link : '/schedule',
+      link : this.envUrl.schedule_admin,
       icon : 'fa fa-calendar-alt'
     },
     {
       title : 'Teacher',
-      link : '/teacher',
+      link : this.envUrl.teacher_admin,
       icon : 'fa fa-chalkboard-teacher'
     },
     {
       title : 'Lesson',
-      link : '/lesson',
+      link : this.envUrl.lesson_admin,
       icon : 'fa fa-book'
     },
     {
       title : 'request',
-      link : '/request',
+      link : this.envUrl.request_user,
+      icon : 'fa fa-check-square'
+    },
+    {
+      title : 'approval',
+      link : this.envUrl.approval_admin,
       icon : 'fa fa-check-square'
     },
     {
       title : 'Room',
-      link : '/room',
+      link : this.envUrl.room_admin,
       icon : 'fa fa-store-alt'
     }
   ]

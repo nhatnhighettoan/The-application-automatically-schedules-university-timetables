@@ -22,7 +22,7 @@ export const routes: Routes = [
       {
         path: 'admin',
         children: [
-          { path: '', component: HomeComponent },
+          { path: '', component: HomeComponent},
           { path: 'lesson', component: LessonComponent },
           { path: 'teacher', component: TeacherComponent },
           { path: 'room', component: RoomComponent },
