@@ -1,10 +1,11 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-viewtable',
   standalone: true,
-  imports: [NgIf,NgFor,NgClass],
+  imports: [NgIf,NgFor,NgClass,RouterLink],
   templateUrl: './viewtable.component.html',
   styleUrl: './viewtable.component.css',
   host: {ngSkipHydration: 'true'},

@@ -31,12 +31,9 @@
                 </label>
                 <!-- button filter status -->
                 <div class="flex items-center space-x-3">
-                    <button 
-                        *ngFor="let status of statusList; index as index"
-                        (click)="onSelectStatus(index)"
+                    <button *ngFor="let status of statusList; index as index" (click)="onSelectStatus(index)"
                         class="shadow-md border px-4 py-1 rounded-md"
-                        [ngClass]="statusSelect == index ? getStatusColor(status) : '' "
-                    >{{status}}</button>
+                        [ngClass]="statusSelect == index ? getStatusColor(status) : '' ">{{status}}</button>
                 </div>
             </div>
         </div>
@@ -79,8 +76,20 @@
                                     {{item.status}}
                                 </div>
                             </td>
-                            <td class="px-6 py-4">
-                                <button class="p-2 font-medium text-red-600 dark:text-red-500 hover:underline">
+                            <td class="px-6 py-4 flex items-center">
+                                <!-- detail -->
+                                <button
+                                    class="h-[35px] w-[35px] font-medium text-sky-600 rounded-full hover:bg-gray-100">
+                                    <i class="fa fa-eye text-lg"></i>
+                                </button>
+                                <!-- cancel -->
+                                <button
+                                    class="h-[35px] w-[35px] font-medium rounded-full hover:bg-gray-100 text-orange-600">
+                                    <i class="fa fa-minus-circle text-lg"></i>
+                                </button>
+                                <!-- remove -->
+                                <button
+                                    class="h-[35px] w-[35px] font-medium rounded-full hover:bg-gray-100 text-orange-600">
                                     <i class="fa fa-trash"></i>
                                 </button>
                             </td>

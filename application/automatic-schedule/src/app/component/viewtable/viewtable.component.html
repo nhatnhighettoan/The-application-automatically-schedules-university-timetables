@@ -11,7 +11,7 @@
             </div>
 
             <!-- search -->
-            <div class="flex items-center justify-center text-base flex-1 relative">
+            <div class="flex items-center justify-center text-base flex-1 relative gap-3">
                 <!-- search advantage -->
                 <button 
                     (click)="onToggleAdvantageSearchTable()"
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <!-- schedule col -->
+                <!-- schedule col / each course -->
                 <div *ngFor="let day of weekDay;let i = index" class="w-[7%]">
                     <!-- day -->
                     <div class="h-12 justify-center items-center space-x-2 flex font-semibold 
@@ -128,14 +128,15 @@
                     <!-- course  -->
                     <div *ngFor="let course of courses">
                         <div *ngIf="course.day === slicePatternWithComma(day,'_')[0]"
-                            class="p-1 h-[70px] flex flex-col text-center border border-black/10 bg-[#F2EFE5] overflow-auto text-xs">
+                            routerLink="/course-view/1"
+                            class="cursor-pointer p-1 h-[70px] flex flex-col text-center border border-black/10 bg-[#F2EFE5] overflow-auto text-xs">
                             <!-- time -->
                             <div>
                                 <i class="fa fa-clock mr-1 text-sky-500"></i>
                                 <span class="font-semibold my-1"> {{course.timeStart}} - {{course.timeEnd}} </span>
                             </div>
                             <!-- title - address - room -->
-                            <div class="flex-1 p-1 bg-white/70 space-y-2">
+                            <div class="flex-1 flex items-center justify-center p-1 bg-white/70 space-y-2">
                                 <span class="font-semibold">{{course.name}}</span>
 
                                 <!-- <div class="flex items-center flex-wrap justify-center gap-1">
