@@ -22,5 +22,7 @@
         <!-- submit -->
         <button class="w-full py-3 bg-sky-500 rounded-full hover:bg-sky-300" >Login</button>
     </form>
-    <div class="w-full text-center text-gray-500" >Don't have a account? <a routerLink="/register" class="underline hover:text-black cursor-pointer" >register</a></div>
+    <div class="w-full text-center text-gray-500" >Don't have a account? 
+        <a [routerLink]="envUrl.register" class="underline hover:text-black cursor-pointer" >register</a>
+    </div>
 </div>

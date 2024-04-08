@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { EnvUrl } from '../../env-url';
 
 interface LinkItem{
   title : string,
@@ -17,6 +18,7 @@ interface LinkItem{
   host: {ngSkipHydration: 'true'},
 })
 export class SidebarComponent {
+  envUrl = EnvUrl
   linkItems : LinkItem[] = [
     {
       title : 'Dashboard',

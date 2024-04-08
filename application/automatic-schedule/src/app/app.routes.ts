@@ -14,35 +14,70 @@ import { ApprovalComponent } from './pages/approval/approval.component';
 import { CourseViewComponent } from './pages/course-view/course-view.component';
 
 export const routes: Routes = [
-    {
-        path:'login',
-        component: LoginComponent
-      },
+  { path: '', redirectTo: 'app/auth/login', pathMatch: 'full' },
+  {
+    path: 'app',
+    children: [
+      // ADMIN route
       {
-        path:'register',
-        component: RegisterComponent
-      },
-      { 
-        path: '', 
-        children:[ 
-          { path:'', component:HomeComponent},
-          { path:'lesson',component:LessonComponent},
-          { path:'teacher', component: TeacherComponent},
-          { path:'room', component: RoomComponent},
-          { path:'request', component: RequestComponent},
-          { path:'approval', component: ApprovalComponent},
-          { path:'schedule', component: ScheduleComponent},
-          { path:'schedule-view/:id', component: ScheduleViewComponent},
-          { path:'course-view/:id', component: CourseViewComponent},
+        path: 'admin',
+        children: [
+          { path: '', component: HomeComponent },
+          { path: 'lesson', component: LessonComponent },
+          { path: 'teacher', component: TeacherComponent },
+          { path: 'room', component: RoomComponent },
+          { path: 'approval', component: ApprovalComponent },
+          { path: 'schedule', component: ScheduleComponent },
+          { path: 'schedule-view/:id', component: ScheduleViewComponent },
+          { path: 'course-view/:id', component: CourseViewComponent },
+          {
+            path: 'notfound',
+            component: NotfoundComponent
+          },
         ],
-        component:DashboardTemplateComponent,
+        component: DashboardTemplateComponent,
       },
+      // USER route
       {
-        path:'notfound',
-        component: NotfoundComponent
+        path: 'user',
+        children:[
+          { path: '', component: HomeComponent },
+          { path: 'schedule', component: ScheduleComponent },
+          { path: 'request', component: RequestComponent },
+          { path: 'schedule-view/:id', component: ScheduleViewComponent },
+          { path: 'course-view/:id', component: CourseViewComponent },
+          {
+            path: 'notfound',
+            component: NotfoundComponent
+          },
+        ]
       },
+      // AUTH route
       {
-        path:'**',
-        redirectTo:'notfound'
+        path: 'auth',
+        children:[
+          {
+            path: 'login',
+            component: LoginComponent
+          },
+          {
+            path: 'register',
+            component: RegisterComponent
+          },
+          {
+            path: '**',
+            redirectTo: 'notfound'
+          },
+        ]
       },
+    ]
+  },
+  {
+    path: 'notfound',
+    component: NotfoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'notfound'
+  },
 ];
