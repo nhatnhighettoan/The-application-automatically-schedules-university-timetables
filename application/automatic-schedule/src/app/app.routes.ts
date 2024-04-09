@@ -12,6 +12,7 @@ import { RequestComponent } from './pages/request/request.component';
 import { ScheduleViewComponent } from './pages/schedule-view/schedule-view.component';
 import { ApprovalComponent } from './pages/approval/approval.component';
 import { CourseViewComponent } from './pages/course-view/course-view.component';
+import { UserTemplateComponent } from './component/user-template/user-template.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'app/auth/login', pathMatch: 'full' },
@@ -50,7 +51,8 @@ export const routes: Routes = [
             path: 'notfound',
             component: NotfoundComponent
           },
-        ]
+        ],
+        component: UserTemplateComponent
       },
       // AUTH route
       {

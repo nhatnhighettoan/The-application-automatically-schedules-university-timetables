@@ -41,11 +41,6 @@ export class SidebarComponent {
       icon : 'fa fa-book'
     },
     {
-      title : 'request',
-      link : this.envUrl.request_user,
-      icon : 'fa fa-check-square'
-    },
-    {
       title : 'approval',
       link : this.envUrl.approval_admin,
       icon : 'fa fa-check-square'

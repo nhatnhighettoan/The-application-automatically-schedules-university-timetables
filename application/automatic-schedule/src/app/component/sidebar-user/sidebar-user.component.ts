@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EnvUrl } from '../../env-url';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NgFor } from '@angular/common';
 
 interface LinkItem{
   title : string,
@@ -11,7 +12,7 @@ interface LinkItem{
 @Component({
   selector: 'app-sidebar-user',
   standalone: true,
-  imports: [RouterLink,RouterLinkActive],
+  imports: [RouterLink,RouterLinkActive,NgFor],
   templateUrl: './sidebar-user.component.html',
   styleUrl: './sidebar-user.component.css'
 })
@@ -25,7 +26,7 @@ export class SidebarUserComponent {
     },
     {
       title : 'Schedule',
-      link : this.envUrl.schedule_admin,
+      link : this.envUrl.schedule_user,
       icon : 'fa fa-calendar-alt'
     },
     {
