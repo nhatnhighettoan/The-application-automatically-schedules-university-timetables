@@ -16,7 +16,6 @@ export class ApprovalComponent {
 
   columnsKey: any[] = [
     'No',
-    'Id',
     'request From',
     'request Description',
     'time',

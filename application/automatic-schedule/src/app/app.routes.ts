@@ -13,6 +13,7 @@ import { ScheduleViewComponent } from './pages/schedule-view/schedule-view.compo
 import { ApprovalComponent } from './pages/approval/approval.component';
 import { CourseViewComponent } from './pages/course-view/course-view.component';
 import { UserTemplateComponent } from './component/user-template/user-template.component';
+import { NotificationComponent } from './pages/notification/notification.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'app/auth/login', pathMatch: 'full' },
@@ -23,7 +24,7 @@ export const routes: Routes = [
       {
         path: 'admin',
         children: [
-          { path: '', component: HomeComponent},
+          { path: '', component: HomeComponent },
           { path: 'lesson', component: LessonComponent },
           { path: 'teacher', component: TeacherComponent },
           { path: 'room', component: RoomComponent },
@@ -32,8 +33,8 @@ export const routes: Routes = [
           { path: 'schedule-view/:id', component: ScheduleViewComponent },
           { path: 'course-view/:id', component: CourseViewComponent },
           {
-            path: 'notfound',
-            component: NotfoundComponent
+            path: '**',
+            redirectTo: 'notfound'
           },
         ],
         component: DashboardTemplateComponent,
@@ -41,15 +42,15 @@ export const routes: Routes = [
       // USER route
       {
         path: 'user',
-        children:[
+        children: [
           { path: '', component: HomeComponent },
           { path: 'schedule', component: ScheduleComponent },
           { path: 'request', component: RequestComponent },
           { path: 'schedule-view/:id', component: ScheduleViewComponent },
           { path: 'course-view/:id', component: CourseViewComponent },
           {
-            path: 'notfound',
-            component: NotfoundComponent
+            path: '**',
+            redirectTo: 'notfound'
           },
         ],
         component: UserTemplateComponent
@@ -57,7 +58,8 @@ export const routes: Routes = [
       // AUTH route
       {
         path: 'auth',
-        children:[
+        children: [
+          { path: '', redirectTo: 'login', pathMatch: 'full' },
           {
             path: 'login',
             component: LoginComponent
@@ -70,7 +72,20 @@ export const routes: Routes = [
             path: '**',
             redirectTo: 'notfound'
           },
-        ]
+        ],
+      },
+      // NOTICE route
+      {
+        path: 'notice',
+        children: [
+          { path: '', redirectTo: 'notification', pathMatch: 'full' },
+          { path: 'notification', component: NotificationComponent },
+          {
+            path: '**',
+            redirectTo: 'notfound'
+          },
+        ],
+        component: DashboardTemplateComponent,
       },
     ]
   },

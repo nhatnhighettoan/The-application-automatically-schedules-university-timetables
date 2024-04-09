@@ -26,7 +26,7 @@
             *ngFor="let item of data"
         >
             <a 
-                [routerLink]=" 3 > 2 ? ['/schedule-view/1'] : ['/schedule-admin/1']"
+                [routerLink]=" 3 > 2 ? ['/app/admin/schedule-view/1'] : ['/app/user/schedule-view/1']"
                 class="bg-gradient-to-b from-sky-400 to-blue-400 rounded-md p-3 h-full w-full text-white cursor-pointer flex flex-col"
             >
                 <h2 class="text-lg line-clamp-2">{{item.title}}</h2>

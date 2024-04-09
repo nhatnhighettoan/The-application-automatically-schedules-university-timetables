@@ -16,7 +16,6 @@ export class RequestComponent {
 
   columnsKey: any[] = [
     'STT',
-    'Id',
     'request',
     'request Description',
     'time',
