@@ -8,10 +8,10 @@
         <a 
             *ngFor="let item of linkItems"
             routerLink={{item.link}}
-            [routerLinkActive]="['bg-gray-100', 'text-\[\#5A67BA\]']"
+            [routerLinkActive]="['bg-gray-200', 'text-\[\#5A67BA\]']"
             [routerLinkActiveOptions]="{exact:true}"
-            class="space-x-3 flex items-center py-3 px-5 duration-100 rounded-lg cursor-pointer w-full 
-            hover:bg-gray-100 hover:text-[#5A67BA]" 
+            class="space-x-3 flex items-center py-3 px-5 duration-100 rounded-lg cursor-pointer w-full mb-1
+            hover:bg-gray-200 hover:text-[#5A67BA]" 
         >
             <i class={{item.icon}}></i>
             <span>{{item.title}}</span>

@@ -13,7 +13,7 @@ export class ScheduleComponent {
   title = "Schedule"
   data : any[] = [
     {
-      title : 'Lop Dai tra - Dai Cuong',
+      title : 'Lop Dai tra - Dai Cuong loremkemwrllsdmffsd[pfsdf sdf,s[d,fsd ',
       semester : 1,
       semesterYearStart: 2020,
       semesterYearEnd: 2024 
