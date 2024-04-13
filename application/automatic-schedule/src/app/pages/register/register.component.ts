@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { EnvUrl } from '../../env-url';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { AuthServiceService } from '../../services/http/auth-service/auth-service.service';
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,8 @@ import { NgIf } from '@angular/common';
 export class RegisterComponent implements OnInit {
   envUrl = EnvUrl
   registerForm! : FormGroup
+
+  constructor(private authService : AuthServiceService){}
   
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -67,6 +70,7 @@ export class RegisterComponent implements OnInit {
     this.onClickValidate()
     if(!this.registerForm.invalid){
       console.log(this.getForm())
+      this.authService.register(this.getForm())
     }
   }
 

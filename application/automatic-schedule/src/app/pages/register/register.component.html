@@ -14,7 +14,7 @@
                 <span class="ml-4 text-gray-600" ><i class="fa fa-envelope"></i></span>
                 <input type="text" class="outline-none p-3 w-full" placeholder="Email" formControlName="email">
             </div>
-            <div *ngIf="email && email.invalid && (email.touched || email.dirty)" class="ml-6 mt-1">
+            <div *ngIf="email && email.invalid && (email.touched || email.dirty)" class="ml-6 mt-1 font-semibold">
                 <span *ngIf="email.errors?.['required']" class="text-rose-500"> Email is required </span>
                 <span *ngIf="email.errors?.['email']" class="text-rose-500"> Invalid email format </span> 
             </div>
@@ -27,7 +27,7 @@
                 <span class="ml-4 text-gray-600" ><i class="fa fa-user"></i></span>
                 <input type="text" class="outline-none p-3 w-full" placeholder="Your name" formControlName="name">
             </div>
-            <div *ngIf="name && name.errors && (name.touched || name.dirty)" class="ml-6 mt-1">
+            <div *ngIf="name && name.errors && (name.touched || name.dirty)" class="ml-6 mt-1 font-semibold">
                 <span *ngIf="name.errors?.['required']" class="text-rose-500">Name is required</span>
                 <span *ngIf="name.errors?.['pattern']" class="text-rose-500">Name must contains no special characters</span>
             </div>
@@ -40,7 +40,7 @@
                 <span class="ml-4 text-gray-600" ><i class="fa fa-graduation-cap"></i></span>
                 <input type="text" class="outline-none p-3 w-full" placeholder="Faculty" formControlName="faculty">
             </div>
-            <div *ngIf="faculty && faculty.errors && (faculty.touched || faculty.dirty)" class="ml-6 mt-1">
+            <div *ngIf="faculty && faculty.errors && (faculty.touched || faculty.dirty)" class="ml-6 mt-1 font-semibold">
                 <span *ngIf="faculty.errors?.['required']" class="text-rose-500">Faculty is required</span>
                 <span *ngIf="faculty.errors?.['pattern']" class="text-rose-500">faculty must contains no special characters</span>
             </div>
@@ -53,7 +53,7 @@
                 <span class="ml-4 text-gray-600" ><i class="fa fa-lock"></i></span>
                 <input type="password" class="outline-none p-3 w-full" placeholder="Password" formControlName="password">
             </div>
-            <div *ngIf="password && password.invalid && (password.touched || password.dirty)" class="ml-6 mt-1">
+            <div *ngIf="password && password.invalid && (password.touched || password.dirty)" class="ml-6 mt-1 font-semibold">
                 <span *ngIf="password.errors?.['required']" class="text-rose-500"> Password is required </span>
                 <span *ngIf="password.errors?.['minlength']" class="text-rose-500" > Password must be at least 6 characters</span> 
             </div>
