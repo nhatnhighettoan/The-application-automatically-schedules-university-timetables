@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { PopupComponent } from '../../component/popup/popup.component';
 
 @Component({
   selector: 'app-lesson',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,PopupComponent],
   templateUrl: './lesson.component.html',
   styleUrl: './lesson.component.css',
   host: {ngSkipHydration: 'true'},

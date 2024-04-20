@@ -14,6 +14,7 @@ import { ApprovalComponent } from './pages/approval/approval.component';
 import { CourseViewComponent } from './pages/course-view/course-view.component';
 import { UserTemplateComponent } from './component/user-template/user-template.component';
 import { NotificationComponent } from './pages/notification/notification.component';
+import { ScheduleGenerateComponent } from './pages/schedule-generate/schedule-generate.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'app/auth/login', pathMatch: 'full' },
@@ -32,6 +33,7 @@ export const routes: Routes = [
           { path: 'schedule', component: ScheduleComponent },
           { path: 'schedule-view/:id', component: ScheduleViewComponent },
           { path: 'course-view/:id', component: CourseViewComponent },
+          { path: 'schedule-generate', component: ScheduleGenerateComponent},
           {
             path: '**',
             redirectTo: 'notfound'

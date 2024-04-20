@@ -23,8 +23,10 @@
             <button class="bg-green-500 hover:bg-green-400 px-4 py-2 rounded-md font-semibold text-white">
                 <i class="fa fa-file-excel"></i>
             </button>
-            <!-- button table view -->
-            <button class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
+            <!-- button popup form -->
+            <button
+            (click)="popup.onOpenPopup()"
+            class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
                 <i class="fa fa-plus"></i> ADD
             </button>
         </div>
@@ -76,3 +78,8 @@
         </div>
     </div>
 </div>
+
+<!-- view model popup -->
+<app-popup #popup [popupTitle]="title" >
+    <p sectionPopup >hello</p>
+</app-popup>

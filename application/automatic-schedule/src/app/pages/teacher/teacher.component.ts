@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { PopupComponent } from '../../component/popup/popup.component';
 
 @Component({
   selector: 'app-teacher',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,PopupComponent],
   templateUrl: './teacher.component.html',
   styleUrl: './teacher.component.css',
 })

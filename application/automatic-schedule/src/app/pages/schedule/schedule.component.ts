@@ -1,11 +1,12 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { PopupComponent } from '../../component/popup/popup.component';
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
-  imports: [NgIf,NgFor,RouterLink],
+  imports: [NgIf,NgFor,RouterLink,PopupComponent],
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css',
 })
