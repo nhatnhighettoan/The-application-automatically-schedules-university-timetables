@@ -1,6 +1,6 @@
 <div class="p-4 grid grid-cols-2 grid-rows-2 gap-3">
 
-  <!-- Chart Request for the week -->
+  <!-- [1] Chart Request for the week -->
   <div class="h-fit border rounded-xl p-3 shadow-md overflow-hidden space-y-4">
     <!-- title  -->
     <div class="px-3">
@@ -25,7 +25,7 @@
 
   </div>
 
-  <!-- Request for the week -->
+  <!-- [2] Request for the week -->
   <div class="h-fit border rounded-xl shadow-md overflow-hidden space-y-4">
     <!-- title  -->
     <div class="px-6 pt-3">
@@ -67,15 +67,15 @@
     </div>
   </div>
 
-  <!-- Room Used -->
-  <div class="h-fit border rounded-xl p-3 shadow-md overflow-hidden space-y-4">
+  <!-- [3] Room Used -->
+  <div class="h-fit border rounded-xl py-3 shadow-md overflow-hidden space-y-4">
     <!-- title  -->
-    <div class="px-3">
+    <div class="px-6">
       <h1 class="text-xl font-semibold ">Room Used</h1>
     </div>
 
     <!-- date-time -->
-    <div class="px-3 flex items-start justify-between">
+    <div class="px-6 flex items-start justify-between">
       <!-- left -->
       <div class="flex items-start gap-2" >
         <div class="px-1 text-[14px] rounded-md bg-sky-500 text-white w-fit flex items-center gap-3">
@@ -98,36 +98,37 @@
     </div>
 
     <!-- table view -->
-    <div class="max-h-[310px] overflow-y-auto" >
-      <table class="  border-slate-400 w-full text-center">
-        <thead class="sticky top-0 right-0 left-0 border bg-sky-100" >
+    <div class="max-h-[310px] overflow-y-auto border" >
+      <table class="border-slate-400 w-full border-separate border-spacing-0 text-center">
+        <thead class="sticky top-0 right-0 left-0 border bg-gray-100" >
           <tr>
-            <th rowspan="2" scope="col" class="border border-slate-300 p-3"></th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Mon</th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Tues</th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Wednes</th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Thurs</th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Fri</th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Satur</th>
-            <th colspan="2" scope="col" class="border border-slate-300 p-3">Sun</th>
+            <th rowspan="2" scope="col" class="w-[12%] border border-slate-300 p-2"></th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Mon</th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Tues</th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Wed</th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Thur</th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Fri</th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Sat</th>
+            <th colspan="2" scope="col" class="w-[12%] border border-slate-300 p-2">Sun</th>
           </tr>
           <tr>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-sun"></i></th>
-            <th class="border border-slate-300"><i class="fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-yellow-500 fa fa-sun"></i></th>
+            <th class="border border-slate-300 w-[6%]"><i class="text-gray-500 fa fa-moon"></i></th>
           </tr>
         </thead>
+
         <tbody>
           <tr *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]" >
             <td class="border border-slate-300 p-2">F301</td>
