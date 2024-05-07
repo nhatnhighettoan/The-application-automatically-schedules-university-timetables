@@ -1,11 +1,11 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import Chart from 'chart.js/auto';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,NgClass],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   host: { ngSkipHydration: 'true' },
