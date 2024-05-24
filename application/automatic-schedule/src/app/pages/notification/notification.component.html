@@ -24,22 +24,51 @@
     <!-- content -->
     <div class="p-3" > 
         <div 
-            *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" 
+            *ngFor="let i of data" 
             class="border-t flex p-3"
         >
-            <div class="flex-1 flex justify-center items-start p-2" > 
+            <div class="flex-1 flex justify-center items-start px-2 pt-1" > 
                 <button><i class="fa fa-window-close text-2xl text-gray-400 hover:text-red-500"></i></button>
             </div>
-            <div class="flex-[12] space-y-1 p-2" >
-                <span class="bg-orange-400 p-1 text-white rounded-sm text-sm" >Message</span>
-                <h2 class="font-semibold text-gray-600" >Darren Smith sent new message</h2>
-                <p class="text-gray-500" >set up perspiciatist nde comnis iste natus error sit voluptatem accusiantium dileremque laudantium</p>
-                <span class="text-red-500" >By Darren</span>
+            <div class="flex-[12] space-y-2 p-2" >
+                <span 
+                    class="p-1 text-white rounded-sm text-sm"
+                    [ngClass]="{
+                        'bg-orange-400':i.type !== 'Request',
+                        'bg-sky-400':i.type === 'Request'
+                    }"
+                >
+                    {{i.type}}
+                </span>
+
+                <!-- 1 -->
+                <div *ngIf="i.type !== 'Request'" class="space-y-1">
+                    <h2 class="text-gray-600" > <span class="font-semibold" >{{i.sender}}:</span>  {{i.title}}</h2>
+                    <p class="text-gray-500" [ngClass]="{'line-clamp-1':!classTest,'line-clamp-none':classTest}">
+                        {{i.description}}
+                    </p>    
+                </div>
+
+                <!-- 2 -->
+                <div *ngIf="i.type == 'Request'" class="text-gray-500 border border-black/50 p-3 rounded-sm space-y-3">
+                    <h2 class="text-gray-600" > <span class="font-semibold" >{{i.sender}}:</span>  {{i.title}}</h2>
+                    <div>
+                        {{i.description}}
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div class="w-1/3 mx-auto text-white" >
+                        <button class="w-full bg-sky-400 py-1 rounded-sm" >click me!</button>
+                    </div>
+                </div>
+                <!-- <button (click)="test" class="text-red-500" >More...</button> -->
             </div>
+
             <div class="flex-[4] flex items-start justify-center space-x-2 text-gray-500 p-2" >
                 <span> <i class="fa fa-clock"></i> </span>
-                <span>24 Nov 2018</span>
-                <span>at 9:30 AM</span>
+                <span>{{i.date}}</span>
+                <span>at {{i.dateTime}} AM</span>
             </div>
         </div>
     </div>
