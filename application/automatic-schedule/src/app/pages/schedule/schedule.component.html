@@ -12,8 +12,9 @@
                 <span class="px-2"><i class="fa fa-search"></i></span>
             </div>
 
-            <button class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
-                <i class="fa fa-plus"></i> ADD
+            <button routerLink="/app/admin/schedule-generate" 
+                class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
+                <i class="fa fa-share"></i> New Schedule
             </button>
         </div>
     </div>
@@ -22,20 +23,24 @@
     <div class="mx-4 mt-4 flex flex-wrap">
         <!-- item -->
         <div 
-            class="md:w-1/4 sm:w-1/2 w-full p-2 h-auto"
+            class="md:w-1/4 sm:w-1/2 w-full p-2 h-auto "
             *ngFor="let item of data"
         >
             <a 
-                [routerLink]=" 3 > 2 ? ['/schedule-view/1'] : ['/schedule-admin/1']"
+                [routerLink]=" 3 > 2 ? ['/app/admin/schedule-view/1'] : ['/app/user/schedule-view/1']"
                 class="bg-gradient-to-b from-sky-400 to-blue-400 rounded-md p-3 h-full w-full text-white cursor-pointer flex flex-col"
             >
-                <h2 class="text-lg line-clamp-2">{{item.title}}</h2>
-                <br>
+                <h2 class="text-lg line-clamp-2 mb-4">{{item.title}}</h2>
                 <div class="mt-auto flex items-center justify-between flex-wrap space-y-1">
-                    <span class="border px-1 rounded-md" >HK {{item.semester}}</span>
+                    <span class="border bg-white px-1 rounded-md text-gray-600" >HK {{item.semester}}</span>
                     <span class="break-all" ><i class="fa fa-calendar mr-1"></i> {{item.semesterYearStart}} - {{item.semesterYearEnd}} </span>
                 </div>
             </a>
         </div>
     </div>
 </div>
+
+<!-- view model popup -->
+<app-popup #popup [popupTitle]="title" >
+    <p sectionPopup >hello</p>
+</app-popup>

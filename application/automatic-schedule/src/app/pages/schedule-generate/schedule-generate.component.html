@@ -1,0 +1,148 @@
+<div class="p-3">
+    <div class="mx-4 mt-4 pb-3">
+        <h1 class="text-3xl font-semibold border-l-[6px] border-blue-500 pl-3">{{title}}</h1>
+    </div>
+
+    <div class="p-3 flex gap-8 flex-col flex-1">
+        <!-- generate buttom -->
+        <div class="flex items-start justify-end gap-2" >
+            <button class="bg-orange-500 hover:bg-orange-400 px-4 py-2 rounded-md font-semibold text-white">
+                <i class="fa fa-exclamation-triangle"></i> Cancel
+            </button>
+            <button class="bg-green-500 hover:bg-green-400 px-4 py-2 rounded-md font-semibold text-white">
+                <i class="fa fa-file-export"></i> Generate
+            </button>
+        </div>
+
+        <!-- schedule info -->
+        <div class="shadow-md overflow-hidden border rounded-lg p-1">
+            <div class="px-4 pt-3 pb-2 font-semibold text-white uppercase bg-sky-500  rounded-t-md">
+                <p>Schedule</p>
+            </div>
+            <div class="px-3 py-3 flex items-end gap-4">
+                <div class="nameSchedule flex-1">
+                    <label for="name-schedule" class="block mb-2 text-sm font-medium text-gray-900">Name
+                        Schedule</label>
+                    <input type="text" id="name-schedule"
+                        class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs ">
+                </div>
+
+                <div class="semester">
+                    <label for="semester" class="block mb-2 text-sm font-medium text-gray-900">Semester</label>
+                    <select id="countries"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg block w-full p-1.5 ">
+                        <option selected>Choose semester</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                
+                <div class="semesterYear flex items-end gap-2">
+                    <div class="semesterYearStart">
+                        <label for="semester-year-start"
+                            class="block mb-2 text-sm font-medium text-gray-900">Year</label>
+                        <input type="date" id="semester-year-start"
+                            class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs ">
+                    </div>
+                    <span class="h-full py-1.5"><i class="fa fa-long-arrow-alt-right"></i></span>
+                    <div class="semesterYearEnd">
+                        <input type="date" id="semester-year-end"
+                            class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- course and room info -->
+        <div class="flex-1 flex items-start gap-2">
+            <!-- room generate -->
+            <div class="flex-[2] shadow-md overflow-hidden border rounded-lg p-1">
+                <div class="px-4 pt-3 pb-2 font-semibold text-white uppercase bg-sky-500  rounded-t-md flex items-start justify-between">
+                    <p>Course</p>
+                    <button class="hover:bg-black/20 rounded-md px-1.5" ><i class="fa fa-plus"></i></button>
+                </div>
+                <!-- content -->
+                <div class="px-1 py-3 flex items-start gap-2">
+                    <!-- left -->
+                    <div class="relative flex-1 overflow-x-auto">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100 ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 rounded-s-lg">
+                                        <i class="fa fa-book" ></i> Subject
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        class size
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 rounded-e-lg">
+                                        Type
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        Toan Roi Rac
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        125
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        Ly Thuyet
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- right -->
+                    <div class="relative overflow-x-auto">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-100 ">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 rounded-s-lg">
+                                        <i class="fa fa-chalkboard-teacher" ></i> Teacher
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 rounded-e-lg">
+                                        Quality
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white ">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        <span>Lorem nguyen</span>
+                                        <span>, </span>
+                                        <span>Goku Vo</span>
+                                        <span>, </span>
+                                        <span>Goku Vo</span>
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        <span>3</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- room generate -->
+            <div class="flex-1 shadow-md overflow-hidden border rounded-lg p-1">
+                <div class="px-4 pt-3 pb-2 font-semibold text-white uppercase bg-sky-500  rounded-t-md flex items-start justify-between">
+                    <p>Room</p>
+                    <button class="hover:bg-black/20 rounded-md px-1.5" ><i class="fa fa-plus"></i></button>
+                </div>
+                <!-- content -->
+                <div class="p-3 py-3 flex items-start gap-2">
+                    <!-- item -->
+                    <div class="rounded-lg bg-gray-200 w-fit pl-2 pr-1 flex gap-2 items-center">
+                        <span>F705</span>
+                        <i class="fa fa-times-circle text-[14px] hover:text-red-400 cursor-pointer text-red-500"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

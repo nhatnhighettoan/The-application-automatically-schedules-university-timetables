@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ViewtableComponent } from '../../component/viewtable/viewtable.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-schedule-view',
   standalone: true,
-  imports: [NgFor,ViewtableComponent],
+  imports: [NgFor,ViewtableComponent,RouterLink],
   templateUrl: './schedule-view.component.html',
   styleUrl: './schedule-view.component.css',
 })

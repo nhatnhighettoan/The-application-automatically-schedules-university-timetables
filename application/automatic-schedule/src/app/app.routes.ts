@@ -10,35 +10,94 @@ import { ScheduleComponent } from './pages/schedule/schedule.component';
 import { DashboardTemplateComponent } from './component/dashboard-template/dashboard-template.component';
 import { RequestComponent } from './pages/request/request.component';
 import { ScheduleViewComponent } from './pages/schedule-view/schedule-view.component';
+import { ApprovalComponent } from './pages/approval/approval.component';
+import { CourseViewComponent } from './pages/course-view/course-view.component';
+import { UserTemplateComponent } from './component/user-template/user-template.component';
+import { NotificationComponent } from './pages/notification/notification.component';
+import { ScheduleGenerateComponent } from './pages/schedule-generate/schedule-generate.component';
+import { HomeUserComponent } from './pages/home-user/home-user.component';
 
 export const routes: Routes = [
-    {
-        path:'login',
-        component: LoginComponent
-      },
+  { path: '', redirectTo: 'app/auth/login', pathMatch: 'full' },
+  {
+    path: 'app',
+    children: [
+      // ADMIN route
       {
-        path:'register',
-        component: RegisterComponent
-      },
-      { 
-        path: '', 
-        children:[ 
-          { path:'', component:HomeComponent},
-          { path:'lesson',component:LessonComponent},
-          { path:'teacher', component: TeacherComponent},
-          { path:'room', component: RoomComponent},
-          { path:'request', component: RequestComponent},
-          { path:'schedule', component: ScheduleComponent},
-          { path:'schedule-view/:id', component: ScheduleViewComponent},
+        path: 'admin',
+        children: [
+          { path: '', component: HomeComponent },
+          { path: 'lesson', component: LessonComponent },
+          { path: 'teacher', component: TeacherComponent },
+          { path: 'room', component: RoomComponent },
+          { path: 'approval', component: ApprovalComponent },
+          { path: 'schedule', component: ScheduleComponent },
+          { path: 'schedule-view/:id', component: ScheduleViewComponent },
+          { path: 'course-view/:id', component: CourseViewComponent },
+          { path: 'schedule-generate', component: ScheduleGenerateComponent},
+          {
+            path: '**',
+            redirectTo: 'notfound'
+          },
         ],
-        component:DashboardTemplateComponent,
+        component: DashboardTemplateComponent,
       },
+      // USER route
       {
-        path:'notfound',
-        component: NotfoundComponent
+        path: 'user',
+        children: [
+          { path: '', component: HomeUserComponent },
+          { path: 'schedule', component: ScheduleComponent },
+          { path: 'request', component: RequestComponent },
+          { path: 'schedule-view/:id', component: ScheduleViewComponent },
+          { path: 'course-view/:id', component: CourseViewComponent },
+          {
+            path: '**',
+            redirectTo: 'notfound'
+          },
+        ],
+        component: UserTemplateComponent
       },
+      // AUTH route
       {
-        path:'**',
-        redirectTo:'notfound'
+        path: 'auth',
+        children: [
+          { path: '', redirectTo: 'login', pathMatch: 'full' },
+          {
+            path: 'login',
+            component: LoginComponent
+          },
+          {
+            path: 'register',
+            component: RegisterComponent
+          },
+          {
+            path: '**',
+            redirectTo: 'notfound'
+          },
+        ],
       },
+      // NOTICE route
+      {
+        path: 'notice',
+        children: [
+          { path: '', redirectTo: 'notification', pathMatch: 'full' },
+          { path: 'notification', component: NotificationComponent },
+          {
+            path: '**',
+            redirectTo: 'notfound'
+          },
+        ],
+        component: DashboardTemplateComponent,
+      },
+    ]
+  },
+  {
+    path: 'notfound',
+    component: NotfoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'notfound'
+  },
 ];
