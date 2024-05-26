@@ -8,10 +8,10 @@
         <a 
             *ngFor="let item of linkItems"
             routerLink={{item.link}}
-            [routerLinkActive]="['bg-gray-200', 'text-\[\#5A67BA\]']"
+            [routerLinkActive]="['bg-gray-200', 'text-sky-600']"
             [routerLinkActiveOptions]="{exact:true}"
             class="space-x-3 flex items-center py-3 px-5 duration-100 rounded-lg cursor-pointer w-full mb-1
-            hover:bg-gray-200 hover:text-[#5A67BA]" 
+            hover:bg-gray-200 hover:text-sky-600" 
         >
             <i class={{item.icon}}></i>
             <span>{{item.title}}</span>
@@ -19,7 +19,7 @@
     </div>
 
     <button 
-        class="mt-auto mb-3 mx-auto w-2/3 px-5 py-3 bg-white text-[#5A67BA] border-[#5A67BA] border shadow-md rounded-lg
+        class="mt-auto mb-3 mx-auto w-2/3 px-5 py-3 bg-white text-sky-600 border-sky-600 border shadow-md rounded-lg
         hover:bg-[]"
         routerLink="/app/auth/login"
     >

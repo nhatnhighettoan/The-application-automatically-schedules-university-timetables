@@ -15,6 +15,10 @@
                 class="bg-green-500 shadow-md rounded-full px-[9px] py-1 border text-white hover:bg-white hover:text-green-500">
                 <i class="fa fa-save"></i>
             </button>
+            <button
+                class="bg-yellow-500 shadow-md rounded-full px-[9px] py-1 border text-white hover:bg-white hover:text-green-500">
+                <i class="fa fa-times"></i>
+            </button>
         </div>
     </div>
 
@@ -54,69 +58,99 @@
 
     <!-- room - teacher - lesson - schedule information -->
     <hr class="my-4">
-    <div class="flex space-x-4"
-    >
+    <div class="flex space-x-4">
         <!-- room -->
-        <div class="flex-1 flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md hover:bg-sky-300">
-            <div class="w-full flex items-center mb-2">
-                <span class="font-semibold pl-1 border-l-4 border-sky-500">ROOM</span>
-                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
-                    <i class="fa fa-store-alt text-lg"></i>
+        <div class="flex-1 rounded-xl shadow-md overflow-hidden border-sky-500 border-2">
+            <div class="max-h-[299px] overflow-auto flex flex-col space-y-1 bg-gray-100 p-4 h-full">
+                <div class="w-full flex items-center mb-2">
+                    <span class="font-semibold pl-1 border-l-4 border-sky-500">ROOM</span>
+                    <div
+                        class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                        <i class="fa fa-store-alt text-lg"></i>
+                    </div>
                 </div>
+                <p>ID: <span class="text-gray-600 ml-2">ROOM001</span></p>
+                <p>Room: <span class="text-gray-600 ml-2">F302</span></p>
+                <p>Description: <span class="text-gray-600 ml-2">Room for student and teacher math</span></p>
+                <p>Location: <span class="text-gray-600 ml-2">Linh Trung</span></p>
+                <p>Capacity: <span class="text-gray-600 ml-2">200 person</span></p>
+                <p>Type: <span class="text-gray-600 ml-2">Ly Thuyet</span></p>
+
             </div>
-            <p>ID: <span class="text-gray-600 ml-2">ROOM001</span></p>
-            <p>Room: <span class="text-gray-600 ml-2">F302</span></p>
-            <p>Description: <span class="text-gray-600 ml-2">Room for student and teacher math</span></p>
-            <p>Location: <span class="text-gray-600 ml-2">Linh Trung</span></p>
-            <p>Capacity: <span class="text-gray-600 ml-2">200 person</span></p>
-            <p>Type: <span class="text-gray-600 ml-2">Ly Thuyet</span></p>
+            <div
+                class="bg-sky-500 hover:bg-sky-600 cursor-pointer text-white font-semibold sticky bottom-0 left-0 right-0 p-1 text-center">
+                Edit
+            </div>
         </div>
 
         <!-- teacher -->
-        <div class="flex-1 flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md hover:bg-sky-300">
-            <div class="w-full flex items-center mb-2">
-                <span class="font-semibold pl-1 border-l-4 border-sky-500">TEACHER</span>
-                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
-                    <i class="fa fa-chalkboard-teacher text-lg"></i>
+        <div class="flex-1 rounded-xl shadow-md overflow-hidden border-sky-500 border-2">
+            <div class="max-h-[299px] overflow-auto flex flex-col space-y-1 bg-gray-100 p-4 h-full">
+                <div class="w-full flex items-center mb-2">
+                    <span class="font-semibold pl-1 border-l-4 border-sky-500">TEACHER</span>
+                    <div
+                        class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                        <i class="fa fa-chalkboard-teacher text-lg"></i>
+                    </div>
                 </div>
+                <p>ID: <span class="text-gray-600 ml-2">TEACHER001</span></p>
+                <p>Teacher: <span class="text-gray-600 ml-2">LOREM nguyen</span></p>
+                <p>Gender: <span class="text-gray-600 ml-2">Male</span></p>
+                <p>Falculty: <span class="text-gray-600 ml-2">Mathematic</span></p>
+                <p>Birthday: <span class="text-gray-600 ml-2">20/01/1999</span></p>
+                <p>Address: <span class="text-gray-600 ml-2">Lorem street, KP lorem</span></p>
+                <p>Email: <span class="text-gray-600 ml-2">Lorem&#64;gmail.com</span></p>
+                <p>Phone: <span class="text-gray-600 ml-2">0899807322</span></p>
+
             </div>
-            <p>ID: <span class="text-gray-600 ml-2">TEACHER001</span></p>
-            <p>Teacher: <span class="text-gray-600 ml-2">LOREM nguyen</span></p>
-            <p>Gender: <span class="text-gray-600 ml-2">Male</span></p>
-            <p>Falculty: <span class="text-gray-600 ml-2">Mathematic</span></p>
-            <p>Birthday: <span class="text-gray-600 ml-2">20/01/1999</span></p>
-            <p>Address: <span class="text-gray-600 ml-2">Lorem street, KP lorem</span></p>
-            <p>Email: <span class="text-gray-600 ml-2">Lorem&#64;gmail.com</span></p>
-            <p>Phone: <span class="text-gray-600 ml-2">0899807322</span></p>
+            <div
+                class="bg-sky-500 hover:bg-sky-600 cursor-pointer text-white font-semibold sticky bottom-0 left-0 right-0 p-1 text-center">
+                Edit
+            </div>
         </div>
 
         <!-- lesson -->
-        <div class="flex-1 flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md hover:bg-sky-300">
-            <div class="w-full flex items-center mb-2">
-                <span class="font-semibold pl-1 border-l-4 border-sky-500">LESSON</span>
-                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
-                    <i class="fa fa-book text-lg"></i>
+        <div class="flex-1 rounded-xl shadow-md overflow-hidden border-sky-500 border-2">
+            <div class="max-h-[299px] overflow-auto flex flex-col space-y-1 bg-gray-100 p-4 h-full">
+                <div class="w-full flex items-center mb-2">
+                    <span class="font-semibold pl-1 border-l-4 border-sky-500">LESSON</span>
+                    <div
+                        class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                        <i class="fa fa-book text-lg"></i>
+                    </div>
                 </div>
+                <p>ID: <span class="text-gray-600 ml-2">LESSON001</span></p>
+                <p>Lesson: <span class="text-gray-600 ml-2">Toan Roi Rac</span></p>
+                <p>Description: <span class="text-gray-600 ml-2">Math for student 1st year</span></p>
+                <p>Index: <span class="text-gray-600 ml-2">3</span></p>
+                <p>Type: <span class="text-gray-600 ml-2">Ly Thuyet</span></p>
+
             </div>
-            <p>ID: <span class="text-gray-600 ml-2">LESSON001</span></p>
-            <p>Lesson: <span class="text-gray-600 ml-2">Toan Roi Rac</span></p>
-            <p>Description: <span class="text-gray-600 ml-2">Math for student 1st year</span></p>
-            <p>Index: <span class="text-gray-600 ml-2">3</span></p>
-            <p>Type: <span class="text-gray-600 ml-2">Ly Thuyet</span></p>
+            <div
+                class="bg-sky-500 hover:bg-sky-600 cursor-pointer text-white font-semibold sticky bottom-0 left-0 right-0 p-1 text-center">
+                Edit
+            </div>
         </div>
 
         <!-- schedule -->
-        <div class="flex-1 flex flex-col space-y-1 bg-gray-100 p-4 rounded-xl shadow-md hover:bg-sky-300">
-            <div class="w-full flex items-center mb-2">
-                <span class="font-semibold pl-1 border-l-4 border-sky-500">SCHEDULE</span>
-                <div class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
-                    <i class="fa fa-calendar-alt text-lg"></i>
+        <div class="flex-1 rounded-xl shadow-md overflow-hidden border-sky-500 border-2">
+            <div class="max-h-[299px] overflow-auto flex flex-col space-y-1 bg-gray-100 p-4 h-full">
+                <div class="w-full flex items-center mb-2">
+                    <span class="font-semibold pl-1 border-l-4 border-sky-500">SCHEDULE</span>
+                    <div
+                        class="w-[35px] h-[35px] flex items-center justify-center rounded-full shadow-lg ml-auto bg-white border">
+                        <i class="fa fa-calendar-alt text-lg"></i>
+                    </div>
                 </div>
+                <p>ID: <span class="text-gray-600 ml-2">schedule001</span></p>
+                <p>Schedule: <span class="text-gray-600 ml-2">Lop dai tra</span></p>
+                <p>Year: <span class="text-gray-600 ml-2">2020-2021</span></p>
+                <p>Semester: <span class="text-gray-600 ml-2">HK 1</span></p>
             </div>
-            <p>ID: <span class="text-gray-600 ml-2">schedule001</span></p>
-            <p>Schedule: <span class="text-gray-600 ml-2">Lop dai tra</span></p>
-            <p>Year: <span class="text-gray-600 ml-2">2020-2021</span></p>
-            <p>Semester: <span class="text-gray-600 ml-2">HK 1</span></p>
+            <div
+                class="bg-sky-500 hover:bg-sky-600 cursor-pointer text-white font-semibold sticky bottom-0 left-0 right-0 p-1 text-center">
+                Edit
+            </div>
         </div>
     </div>
 </div>

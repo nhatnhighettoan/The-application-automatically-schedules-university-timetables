@@ -1,10 +1,11 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { PopupComponent } from '../../component/popup/popup.component';
 
 @Component({
   selector: 'app-room',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,PopupComponent,NgIf],
   templateUrl: './room.component.html',
   styleUrl: './room.component.css',
 })

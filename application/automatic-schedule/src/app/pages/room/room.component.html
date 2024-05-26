@@ -24,7 +24,8 @@
                 <i class="fa fa-file-excel"></i>
             </button>
             <!-- button table view -->
-            <button class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
+            <button (click)="popup.onOpenPopup()"
+                class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
                 <i class="fa fa-plus"></i> ADD
             </button>
         </div>
@@ -77,3 +78,72 @@
         </div>
     </div>
 </div>
+
+<!-- view model popup -->
+<app-popup #popup [popupTitle]="title">
+    <div sectionPopup>
+        <form class="w-full space-y-3">
+            <!-- room name -->
+            <div>
+                <label for="roomName" class="block mb-2 text-sm font-medium text-gray-900 ">
+                    Room Name</label>
+                <input type="text" id="roomName"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                    placeholder="Name here" />
+            </div>
+
+            <!-- capacity -->
+            <div class="flex-1">
+                <label for="capacity" class="block mb-2 text-sm font-medium text-gray-900 ">
+                    Capacity</label>
+                <input type="text" id="capacity"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                    value="0" />
+            </div>
+
+            <div class="flex gap-2">
+                <!-- location -->
+                <div class="flex-1">
+                    <label for="falculty" class="block mb-2 text-sm font-medium text-gray-900">Select Location</label>
+                    <select id="falculty"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                        <option>Choose Location</option>
+                        <option value="LT" selected>Linh Trung </option>
+                        <option value="NVC">Nguyen Van Cu</option>
+                    </select>
+                </div>
+
+                <!-- room type -->
+                <div class="flex-1">
+                    <label for="roomType" class="block mb-2 text-sm font-medium text-gray-900">Select Type</label>
+                    <select id="roomType"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                        <option value="theory" selected>Theory </option>
+                        <option value="practice">Practice</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- room description -->
+            <div>
+                <label for="roomDescription" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                    Description</label>
+                <textarea id="roomDescription" rows="4"
+                    class="block p-2.5 w-full text-sm resize-none text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
+                    placeholder="Write description here..."></textarea>
+            </div>
+
+            <!-- button -->
+            <div class="flex justify-center">
+                <button type="submit"
+                    class="text-white bg-sky-600 hover:bg-sky-700 font-medium rounded-lg text-sm w-1/4 px-5 py-2.5 text-center">
+                    Submit
+                </button>
+                <button type="submit" *ngIf="false"
+                    class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm w-1/4 px-5 py-2.5 text-center">
+                    Update
+                </button>
+            </div>
+        </form>
+    </div>
+</app-popup>

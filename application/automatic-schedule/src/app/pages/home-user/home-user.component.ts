@@ -1,17 +1,16 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home-user',
   standalone: true,
-  imports: [NgFor,NgClass,NgxChartsModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
-  host: { ngSkipHydration: 'true' },
+  imports: [NgFor,NgxChartsModule],
+  templateUrl: './home-user.component.html',
+  styleUrl: './home-user.component.css'
 })
-export class HomeComponent {
-  dataPC = [
+export class HomeUserComponent {
+  dataVBC = [
     {
       "name": "Germany",
       "value": 40632,
@@ -54,15 +53,16 @@ export class HomeComponent {
         "code": "it"
       }
     }
-  ]
-  viewPC: [number, number] = [800, 300];
-  animationPC = true;
-  colorSchemePC = "vivid";
+  ];
+  viewVBC: [number, number] = [800, 300];
+  animationsVBC = false;
   legendVBC = true;
-  labelsPC = true;
-  doughnut = true;
+  xAxisVBC = true;
+  yAxisVBC = true;
+  showYAxisLabelVBC = true;
+  yAxisLabelVBC = "Amount in Trillions ($)";
 
-  percentageFormatterPC(data: any): string {
-    return data.value + "%";
+  dataLabelFormatterVBC(tooltipText: any) {
+    return "$" + tooltipText + " trillion";
   }
 }

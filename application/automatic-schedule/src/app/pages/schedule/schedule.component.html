@@ -12,8 +12,9 @@
                 <span class="px-2"><i class="fa fa-search"></i></span>
             </div>
 
-            <button class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
-                <i class="fa fa-plus"></i> ADD
+            <button routerLink="/app/admin/schedule-generate" 
+                class="bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-semibold text-white">
+                <i class="fa fa-share"></i> New Schedule
             </button>
         </div>
     </div>
@@ -38,3 +39,8 @@
         </div>
     </div>
 </div>
+
+<!-- view model popup -->
+<app-popup #popup [popupTitle]="title" >
+    <p sectionPopup >hello</p>
+</app-popup>

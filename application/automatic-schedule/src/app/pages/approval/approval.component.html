@@ -30,7 +30,7 @@
                     <button 
                         *ngFor="let status of statusList; index as index"
                         (click)="onSelectStatus(index)"
-                        class="shadow-md border px-4 py-1 rounded-md"
+                        class="shadow-md px-4 py-1 rounded-md"
                         [ngClass]="statusSelect == index ? getStatusColor(status) : '' "
                     >{{status}}</button>
                 </div>
